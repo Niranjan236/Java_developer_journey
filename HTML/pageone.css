@@ -1,0 +1,20 @@
+#table2{
+    color:black;
+}
+
+
+#list1 ul {
+    display: inline-block;
+    border: 2px solid black; 
+    padding: 10px; 
+}
+
+.font_ch h2{
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+#table2 img:hover {
+    border: 5px red groove;
+    transform: scale(1.2);
+}
