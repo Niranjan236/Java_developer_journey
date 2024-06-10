@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <style>
+        body { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	font-family: sans-serif; 
+	line-height: 1.5; 
+	min-height: 100vh; 
+	background: #f3f3f3; 
+	flex-direction: column; 
+	margin: 0; 
+} 
+
+.main { 
+	background-color: #fff; 
+	border-radius: 15px; 
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+	padding: 10px 20px; 
+	transition: transform 0.2s; 
+	width: 500px; 
+	text-align: center; 
+} 
+        #table_1 {
+            width: 30%;
+            margin: auto;
+            /* to make it center */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            background-color: #4caf50;
+            width: 100%;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table_1">
+        <tr>
+            <h1>ELEGANZA</h1>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="name" placeholder="name" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="email" placeholder="E-mail bhar" /></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="pwd" placeholder="passwd" /></td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td>
+                <input type="password" id="c_pwd" placeholder="re-enter passwd" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="check()">Login</button></td>
+        </tr>
+    </table>
+    <script>
+        //login sign-in page
+        function check() {
+            var user = document.getElementById("name").value;
+            var pwd = document.getElementById("pwd").value;
+            var c_pwd = document.getElementById("c_pwd").value;
+            var email = document.getElementById("email").value;
+
+            //regex or regular patterns
+            var letters = /^[a-zA-Z]+$/;
+            let emailPattern =
+                /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/;
+            let username_space_include = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
+
+            if (user == "" || email == "" || pwd == "") {
+                alert("Please fill out all fields");
+            } else if (letters.test(user) && username_space_include.test(user)) {
+                alert("Username must contain only letters.");
+            } else if (!emailPattern.test(email)) {
+                alert("You must provide a valid e-mail address");
+            }
+            // else if (!letters.test(email)) {
+            //     alert("Email must contain only letters.");
+            //     }
+            else if (pwd != c_pwd) {
+                alert("Passwords do not match");
+            } else if (document.getElementById("pwd").value.length > 12) {
+                alert("Password should be less than 12 characters long");
+            } else if (document.getElementById("pwd").value.length < 5) {
+                alert("Password should be more than 5 characters long");
+            } else {
+                alert("Account created successfullyyyyyyy");
+                alert("Redirecting...");
+                window.location.href = "https://www.makemytrip.com/";
+            }
+        }
+    </script>
+</body>
+
+</html>

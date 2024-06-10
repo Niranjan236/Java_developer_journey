@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+  font-family: 'head';
+  src: url('fonts\classy_vogue\Classyvogueregular.ttf');
+}
+
+#heading{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'head';
+    font-size: xx-large;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+
