@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:"General Sans";
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.bounding .boundingelem{
+    transform: translateY(100%);
+}
+
+
+#minicircle{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 9999;
+}
+
+
+#main{
+    width: 100%;
+    background-color: black;
+}
+
+#hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 40px;
+    color: white;
+}
+
+
+#nav a{
+    text-decoration: none;
+    color: white;
+}
+
+#heading{
+    margin-top: 90px;
+}
+
+#heading h1{
+    opacity: .6;
+    margin-left: 30px;
+    font-size: 9vw;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 900;
+}
+
+#heading .blocktext{
+    width: fit-content;
+    margin-left: 70px;
+}
+
+.blocktext h5{
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 10px;
+    line-height: 3;
+
+}
+
+.blocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#chottiheadings{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 80px;
+}
+
+#chottiheadings h5{
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 1vw;
+    text-align: right;
+    margin-right: 12px;
+}
+
+#herofooter{
+    padding:0 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+}
+
+#herofooter a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#herofooter #iconset{
+    display: flex;
+    gap: 5px;
+}
+
+#herofooter .circle{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #888;
+}
+
+#herofooter .circle:hover{
+    background-color: #666;
+}
+
+#second{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: black;
+    padding-top: 200px;
+    padding-left: 50px;
+    padding-right: 200px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.elem{
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #888;
+    padding: 2vw 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0;
+}
+
+.elem h1{
+    text-transform: uppercase;
+    font-size: 8vw;
+    opacity: .7;
+}
+
+.elem h5{
+    text-transform: uppercase;
+    font-size: 1vw;
+    opacity: .7;
+}
+
+.elemlast{
+    border-bottom: 1px solid #888;
+}
+
+/* .elem img{
+position: absolute;
+z-index: 999;
+height: 140%;
+display: none; 
+} */
+.elem img {
+    opacity: 0;
+    pointer-events: none;
+    height: 140%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#about{
+    width: 100%;
+    background-color: black;
+    padding: 10vw 5vw;
+    color: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 50px;
+    padding: 10vw 10vw;
+    padding-left: 40vw;
+}
+
+
+/* #imageabout{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-image: url("./cynthia.png");
+    background-size: cover;
+} */
+
+#textabout{
+    width: 25rem;
+}
+
+#textabout h5{
+    text-transform: uppercase;
+    opacity: .6;
+    margin-bottom:10px;
+}
+
+#textabout p{
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+#textabout a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 6px 20px;
+    font-size: 15px;
+}
+
+
+#about img{
+    width: 200px;
+}
+
+#subscribe{
+    color: white;
+    padding: 20px 30px;
+    background-color: black;
+    padding-bottom: 7vw;
+}
+
+#subscribe h5{
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+#subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+}
+
+#footerleft{
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+#footerleft h5{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#footerright{
+    display: flex;
+    gap: 30px;
+    padding: 10px 20px;
+    font-size: larger-;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footerright a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
